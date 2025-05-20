@@ -9,60 +9,62 @@ import linkedin from '../image/likedin.png'
 import pintrest from '../image/pintrest.png'
 import youtube from '../image/youtube.png'
 import { Link } from "react-router-dom";
+
 function Footer(){
     let Food1=Food.filter((ele)=>ele.titlename==='IndianFood');
     let Food2=Food.filter((ele)=>ele.titlename==='ItalianFood')
     let history=useHistory();
-      function Alldish(titleId){
+    
+    function Alldish(titleId){
         history.push(`/alldish?id=${titleId}`)
     }
+    
     return(
         <div className="footer">
-              <img src={logo} className='flogo'></img>
-              <div className="footer-main">
+            <img src={logo} className='flogo' alt="Логотип"></img>
+            <div className="footer-main">
                 <div>
-                    <h4>Company</h4>
+                    <h4>Компания</h4>
                     <ul>
-                        <li>About us</li>
-                        <li>Team</li>
-                        <li>Help & Support</li>
+                        <li>О нас</li>
+                        <li>Команда</li>
+                        <li>Помощь и поддержка</li>
                     </ul>
                 </div>
                 <div>
-                    <h4>Pages</h4>
+                    <h4>Страницы</h4>
                     <ul>
-                        <li><Link to={'/home'} className='linkto'>Home</Link></li>
-                        <li> <Link to={'/cart'} className='linkto'>Cart</Link></li>
-                        <li><Link to={'/profile'} className='linkto'>Profile</Link></li>
+                        <li><Link to={'/home'} className='linkto'>Главная</Link></li>
+                        <li><Link to={'/cart'} className='linkto'>Корзина</Link></li>
+                        <li><Link to={'/profile'} className='linkto'>Профиль</Link></li>
                     </ul>
                 </div>
                 <div>
-                    <h4>Categories</h4>
+                    <h4>Категории</h4>
                     <ul>
-                        <li onClick={()=>Alldish(Food1[0].titleId) } >Indian</li>
-                        <li onClick={()=>Alldish(Food2[0].titleId)}>Italian</li>
-                        <li>Korean</li>
+                        <li onClick={()=>Alldish(Food1[0].titleId)}>Индийская кухня</li>
+                        <li onClick={()=>Alldish(Food2[0].titleId)}>Итальянская кухня</li>
+                        <li>Корейская кухня</li>
                     </ul>
                 </div>
                 <div>
-                    <h4>Places</h4>
+                    <h4>Регионы</h4>
                     <ul>
-                        <li>Tamil Nadu</li>
-                        <li>Kerala</li>
-                        <li>Karnataka</li>
+                        <li>Тамил Наду</li>
+                        <li>Керала</li>
+                        <li>Карнатака</li>
                     </ul>
                 </div>
                 <div>
-                    <h4>Contact us</h4>
-                    <a href="#"><img src={insta} className='footerimg' ></img></a>
-                    <a href="#"><img src={whatsapp}  className='footerimg'></img></a>
-                    <a href="#"><img src={pintrest} className='footerimg' ></img></a>
-                    <a href="#"><img src={linkedin} className='footerimg' ></img></a>
-                    <a href="#"><img src={youtube} className='footerimg' ></img></a>
+                    <h4>Связаться с нами</h4>
+                    <a href="#"><img src={insta} className='footerimg' alt="Instagram"></img></a>
+                    <a href="#"><img src={whatsapp} className='footerimg' alt="WhatsApp"></img></a>
+                    <a href="#"><img src={pintrest} className='footerimg' alt="Pinterest"></img></a>
+                    <a href="#"><img src={linkedin} className='footerimg' alt="LinkedIn"></img></a>
+                    <a href="#"><img src={youtube} className='footerimg' alt="YouTube"></img></a>
                 </div>
-              
-              </div>
-              <p>Copyrights@2023</p>
+            </div>
+            <p>© 2023 Все права защищены</p>
         </div>
     )
 }

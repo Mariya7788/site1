@@ -1,21 +1,23 @@
 import React,{useState} from "react";
 import { useHistory } from "react-router-dom";
 import "../register/register.css"
+
 function Register(){
     const [username,setUsername]=useState('')
     const [email,setEmail]=useState('')
     const [password,setpassword]=useState('')
     const [nameErr,setnameErr]=useState(false)
     const history=useHistory()
+
     function registertration(){
         if((username.trim().length===0)||(password.trim().length===0)||(email.trim().length===0)){
                 setnameErr(true)
         }
         else if(!email.includes('@','.','com')){
-            alert('please Enter valid email address')
+            alert('Пожалуйста, введите действительный адрес электронной почты')
         }
         else if(password.length<5){
-            alert('please enter the password more than five characters')
+            alert('Пожалуйста, введите пароль длиной более пяти символов')
         }
         else{
             setnameErr(false)
@@ -25,24 +27,26 @@ function Register(){
             history.push('/login')
         }
     }
+
     return(
         <div className="register-body">
         <div className="register-main">
-            <h1>Register Form</h1>
-            {nameErr&& <p className="errP">*please fill every input field*</p>}
+            <h1>Регистрация</h1>
+            {nameErr&& <p className="errP">*пожалуйста, заполните все поля*</p>}
             <br />
-            <p>Name</p>
+            <p>Имя</p>
             <input type='text' value={username} onChange={(e)=>{setUsername(e.target.value)}}></input>
             <br />
-            <p>Email</p>
+            <p>Электронная почта</p>
             <input type='text'value={email} onChange={(e)=>{setEmail(e.target.value)}}></input>
             <br />
-            <p>Password</p>
+            <p>Пароль</p>
             <input type='password'value={password} onChange={(e)=>{setpassword(e.target.value)}}></input>
             <br /><br />
-            <button onClick={registertration}>Register</button>
+            <button onClick={registertration}>Регистрация</button>
         </div>
         </div>
     )
 }
+
 export default Register
