@@ -15,14 +15,14 @@ function Categories(){
     }
     return (
         <div className="category-list">
-           <h2>Categories</h2>
+           <h2>Категории</h2>
            <div className="category-main">
            <div><img src={indian} alt='Indian' onClick={()=>Alldish(Food1[0].titleId)} ></img>
-           <p >Indian cuisins</p></div> 
+           <p>Индийская кухня</p></div> 
            <div><img src={italian} alt='italian' onClick={()=>Alldish(Food2[0].titleId) }  ></img>
-           <p>Italian cuisins</p></div> 
+           <p>Итальянская кухня</p></div> 
            <div><img src={korean} alt='korean'  onClick={()=>Alldish(Food3[0].titleId) } ></img>
-           <p>Korean cuisins</p></div>
+           <p>Корейская кухня</p></div>
            </div>
         </div>
     )
