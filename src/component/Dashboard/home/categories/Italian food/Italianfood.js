@@ -32,7 +32,7 @@ function Italianfood(){
     }
     return(
         <div className="indi-css">
-            <h3>Italian Food</h3>
+            <h3>Итальянская кухня</h3>
             <div className="main-image">
                 
         <button className="leftImageArrowStyles" onClick={()=>prevImage()}> ❰❰ </button>
@@ -46,15 +46,15 @@ function Italianfood(){
 
                     <p>{ele.title}{' '}[{ele.quantity}]</p>
 
-                    <span style={{display:'block'}}>₹{ele.rate}</span>
+                    <span style={{display:'block'}}>₽{ele.rate}</span>
 
-                    <button className="slide-cart-button" onClick={order}>Order</button>{'  '}
+                    <button className="slide-cart-button" onClick={order}>Заказать</button>{'  '}
                     
-                    <button className="slide-cart-button" onClick={()=>AddtoCart(ele)}>+Add toCart</button>
+                    <button className="slide-cart-button" onClick={()=>AddtoCart(ele)}>Добавить в корзину</button>
                 </div>
                 })
             }
-    <button onClick={()=>Alldish(Food2[0].titleId) } className='imsa' >See more</button>
+    <button onClick={()=>Alldish(Food2[0].titleId) } className='imsa'>Показать все</button>
         </div>
         </div>
         </div>

@@ -45,12 +45,12 @@ function Singledish(){
             <h1>{detail.title}</h1>
             <h3>[{detail.quantity}]</h3>
             <br />
-            <h1 >₹{detail.rate}</h1>
-            <p><span >Description:</span><br />{detail.description}</p>
-            <div><span>Available Only At :</span><p>9am to 9pm</p></div>
+            <h1>₽{detail.rate}</h1>
+            <p><span>Описание:</span><br />{detail.description}</p>
+            <div><span>Доступно только:</span><p>с 9:00 до 21:00</p></div>
             <br />
-            <button onClick={()=>AddtoCart(detail)}> + Add to Cart</button>
-            <button style={{marginLeft:'20px'}} onClick={order}>Order</button>
+            <button onClick={()=>AddtoCart(detail)}>Добавить в корзину</button>
+            <button style={{marginLeft:'20px'}} onClick={order}>Заказать</button>
             </div>
         </div>
         <Footer />

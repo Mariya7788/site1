@@ -33,8 +33,8 @@ function Koreanfood(){
         history.push('/cart')
     }
     return(
-        <div  className="indi-css"> 
-            <h3 >Korean Food</h3>
+        <div className="indi-css"> 
+            <h3>Корейская кухня</h3>
             
             <div className="main-image">
             <button className="leftImageArrowStyles" onClick={()=>prevImage()}> ❰❰</button>
@@ -46,13 +46,13 @@ function Koreanfood(){
                          <div key={ele.id} className='Perslide'>
                         <img src={ele.url} alt={ele.title} onClick={()=>detail(ele.id)}></img>
                         <p>{ele.title}{' '}[{ele.quantity}] </p>
-                        <span style={{display:'block'}}>₹{ele.rate}</span>
-                        <button className="slide-cart-button" onClick={order}>Order</button>{'  '}<button className="slide-cart-button" onClick={()=>AddtoCart(ele)}>+Add toCart</button>
+                        <span style={{display:'block'}}>₽{ele.rate}</span>
+                        <button className="slide-cart-button" onClick={order}>Заказать</button>{'  '}<button className="slide-cart-button" onClick={()=>AddtoCart(ele)}>Добавить в корзину</button>
                     </div>
                      </>
                     })
                 }
-                <button onClick={()=>Alldish(Food3[0].titleId) } className='imsa' >See more</button>
+                <button onClick={()=>Alldish(Food3[0].titleId) } className='imsa'>Показать все</button>
             </div>
             
             </div>

@@ -34,8 +34,7 @@ function Indianfood(){
     }
     return(
         <div className="indi-css">
-             {/* <h2>Categories</h2> */}
-             <h3 >Indian Food</h3>
+             <h3>Индийская кухня</h3>
             
         <div className="main-image">
         <button className="leftImageArrowStyles" onClick={()=>prevImage()}> ❰❰</button>
@@ -47,13 +46,13 @@ function Indianfood(){
                      <div key={ele.id} className='Perslide' >
                     <img src={ele.url} alt={ele.title} onClick={()=>detail(ele.id)}></img>
                     <p>{ele.title}{' '}[{ele.quantity}] </p>
-                    <span style={{display:'block'}}>₹{ele.rate}</span>
-                    <button className="slide-cart-button" onClick={order}>Order</button>{'  '}<button className="slide-cart-button" onClick={()=>AddtoCart(ele)}>+Add toCart</button>
+                    <span style={{display:'block'}}>₽{ele.rate}</span>
+                    <button className="slide-cart-button" onClick={order}>Заказать</button>{'  '}<button className="slide-cart-button" onClick={()=>AddtoCart(ele)}>Добавить в корзину</button>
                 </div>
                  </>
                 })
             }
-            <button onClick={()=>Alldish(Food1[0].titleId) } className='imsa' >See more</button>
+            <button onClick={()=>Alldish(Food1[0].titleId) } className='imsa'>Показать все</button>
         </div>
         
         </div>
