@@ -1,58 +1,29 @@
-# Food Ordering Website
+# Веб-сайт для заказа еды
 
-Welcome to the Food Ordering Website project! This is a mini project created with React.js, Redux,Html and CSS for ordering food online. The website includes features such as user authentication, a home page with a menu, category pages, detailed food pages, a user profile, and a shopping cart.
+Добро пожаловать в проект веб-сайта для заказа еды! Это мини-проект, созданный с помощью js, Redux, Html и CSS для заказа еды онлайн. Веб-сайт включает в себя такие функции, как аутентификация пользователя, домашняя страница с меню, страницы категорий, страницы с подробной информацией о продуктах питания, профиль пользователя и корзина покупок.
 
-## Screenshots
 
-### Login Page
-![Login Page](screenshots/screenshot0.png)
+## Функции
 
-### Register Page
-![Register Page](screenshots/screenshot01.png)
+- ** Аутентификация пользователя **: Пользователи могут зарегистрироваться и войти в систему с помощью проверки подлинности. Для простоты этого мини-проекта пользовательские данные хранятся в локальном хранилище.
 
-### Home Page
-![Home Page](screenshots/screenshot1.png)
+- ** Домашняя страница **: Домашняя страница включает в себя главное меню, слайдер изображений для рекламы и категории продуктов питания.
 
-![Home Page](screenshots/screenshot2.png)
+- **Страница категории **: У каждой категории есть своя страница со списком продуктов, относящихся к этой категории.
 
-![Home Page](screenshots/screenshot3.png)
+- **Страница отдельных продуктов **: При нажатии на продукт в категории пользователь переходит на страницу с подробной информацией об этом конкретном продукте.
 
-![Home Page](screenshots/screenshot4.png)
+- **Страница профиля**: У пользователей есть страница профиля, на которой они могут просматривать и редактировать свою личную информацию.
 
-### Category Page
-![Category Page](screenshots/screenshot5.png)
+- **Страница корзины **: Страница корзины реализована с помощью Redux, что позволяет пользователям выполнять следующие действия:
+  - Добавлять товары в корзину
+  - Удалить товары из корзины
+  - Очистить всю корзину целиком
+  - Скорректировать количество товаров с учетом итоговой суммы
 
-### Single Food Page
-![Single Food Page](screenshots/screnshot6.png)
+## Используемые технологии
 
-### Profile Page
-![Profile Page](screenshots/screenshot7.png)
-
-### Cart Page
-![Cart Page](screenshots/screenshot8.png)
-
-## Features
-
-- **User Authentication**: Users can register and log in with validation. User data is stored in local storage for simplicity in this mini project.
-
-- **Home Page**: The home page includes a top menu, an image slider for ads, and categories of food.
-
-- **Category Page**: Each category has its own page with a list of foods related to that category.
-
-- **Single Food Page**: Clicking on a food item in a category navigates the user to a detailed page about that specific food.
-
-- **Profile Page**: Users have a profile page where they can view and edit their personal information.
-
-- **Cart Page (Redux)**: The cart page is implemented with Redux, allowing users to perform the following actions:
-  - Add items to the cart
-  - Delete items from the cart
-  - Clear the entire cart
-  - Adjust item quantities with a responsive total
-
-## Technologies Used
-
-- React.js
+- js
 - Redux
 - Html
 - CSS
-
