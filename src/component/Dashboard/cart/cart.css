@@ -155,127 +155,156 @@
 
 /* Мобильные стили */
 @media (max-width: 768px) {
-    .cart {
-        margin: 10px 20px;
-        padding: 20px;
+    .category-list h2 {
+        font-size: 28px;
+        padding-top: 20px;
     }
 
-    .cart h1 {
-        font-size: 24px;
-        text-align: center;
+    .indi-css h3 {
+        width: 150px;
+        margin-left: 15px;
+        font-size: 16px;
     }
 
-    .cart-main-head {
-        display: none; /* Скрываем заголовки на мобильных */
+    .main-image {
+        height: 300px;
     }
 
-    .cart-main-body {
-        flex-direction: column;
+    .Perslide {
+        min-width: 200px;
+        height: 280px;
         padding: 15px;
-        margin: 15px 0;
-        gap: 15px;
+        margin: 10px;
     }
 
-    .cart-main-body-div {
-        width: 100%;
-        justify-content: center;
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
+    .Perslide img {
+        height: 150px;
     }
 
-    .cart-main-body-div > div {
-        display: flex;
+    .slide-cart-button {
+        padding: 2px 4px;
+        font-size: 12px;
+    }
+
+    .category-main {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
     }
 
-    .cart-main-body img {
-        width: 120px;
-        height: 120px;
+    .category-main img {
+        width: 180px;
+        height: 180px;
+        margin: 20px;
     }
 
-    .cart-main-body-div2 {
+    .category-main p {
+        font-size: 20px;
+    }
+
+    .sfp-main {
+        flex-direction: column;
+        padding: 30px 20px;
+        margin: 20px;
+    }
+
+    .sfp-first img {
         width: 100%;
+        max-width: 400px;
+        height: auto;
     }
 
-    .quantity {
+    .spf-second {
+        padding-left: 0;
+        padding-top: 20px;
+    }
+
+    .All-dish-card {
         justify-content: center;
+        padding: 0 10px;
     }
 
-    .quantity button {
+    .leftImageArrowStyles, .rightImageArrowStyles {
         width: 40px;
         height: 40px;
         font-size: 18px;
     }
 
-    .cart-summary {
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-    }
-
-    .Order-button {
-        margin-left: 0;
-        width: 150px;
-        height: 45px;
-        font-size: 16px;
-    }
-
-    .clearCart-button {
-        padding: 10px 20px;
-        font-size: 14px;
+    .imsa {
+        height: 50px;
+        width: 50px;
+        margin-top: 250px;
+        font-size: 12px;
     }
 }
 
 @media (max-width: 480px) {
-    .cart {
-        margin: 10px;
-        padding: 15px;
+    .category-list h2 {
+        font-size: 24px;
     }
 
-    .cart h1 {
-        font-size: 20px;
+    .indi-css h3 {
+        width: 120px;
+        margin-left: 10px;
+        font-size: 14px;
+        padding: 3px;
     }
 
-    .cart-main-body {
+    .main-image {
+        height: 250px;
+    }
+
+    .Perslide {
+        min-width: 160px;
+        height: 240px;
         padding: 10px;
-        margin: 10px 0;
+        margin: 8px;
     }
 
-    .cart-main-body img {
-        width: 100px;
-        height: 100px;
+    .Perslide img {
+        height: 120px;
     }
 
-    .cart-main-body-div h3 {
-        font-size: 16px;
+    .slide-cart-button {
+        padding: 1px 3px;
+        font-size: 10px;
     }
 
-    .cart-main-body-div button {
-        padding: 3px 8px;
-        font-size: 12px;
+    .category-main img {
+        width: 150px;
+        height: 150px;
+        margin: 15px;
     }
 
-    .quantity button {
+    .category-main p {
+        font-size: 18px;
+    }
+
+    .sfp-main {
+        padding: 20px 15px;
+        margin: 15px;
+    }
+
+    .spf-second h1 {
+        font-size: 24px;
+    }
+
+    .spf-second button {
+        padding: 8px 12px;
+        font-size: 14px;
+        margin: 5px 0;
+    }
+
+    .leftImageArrowStyles, .rightImageArrowStyles {
         width: 35px;
         height: 35px;
         font-size: 16px;
     }
 
-    .Order-button {
-        width: 130px;
-        height: 40px;
-        font-size: 14px;
+    .leftImageArrowStyles {
+        left: 5px;
     }
 
-    .clearCart-button {
-        padding: 8px 15px;
-        font-size: 12px;
-    }
-
-    .cart-main-body-div2 div {
-        font-size: 18px !important;
+    .rightImageArrowStyles {
+        right: 5px;
     }
 }
