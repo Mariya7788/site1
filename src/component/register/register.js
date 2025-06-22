@@ -33,6 +33,7 @@ function Register(){
             <div className="register-main">
                 <h1>Регистрация</h1>
                 {nameErr && <p className="errP">*пожалуйста, заполните все поля*</p>}
+                }
                 <br />
                 <p>Имя</p>
                 <input type='text' value={username} onChange={(e) => {setUsername(e.target.value)}}></input>

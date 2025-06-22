@@ -39,14 +39,17 @@ function Login(){
             <div className="login-main">
                 <h1>Вход</h1>   
                 {incorrectErr && <small style={{color:'red', textAlign:'center'}}>Введите правильное имя пользователя и пароль</small>}
+                }
                 <br />
                 <p>Имя</p>
                 <input type='text' value={loginName} onChange={(e) => {setLoginName(e.target.value)}}></input>
                 {loginNameErr && <small style={{color:'#d3521d'}}>Пожалуйста, введите имя пользователя</small>}
+                }
                 <br />
                 <p>Пароль</p>
                 <input type='password' value={loginPassword} onChange={(e) => {setLoginPassword(e.target.value)}}></input>
                 {loginPasswordErr && <small style={{color:'#d3521d'}}>Пожалуйста, введите пароль</small>}
+                }
                 <br />
                 <button onClick={Loginvalidation}>Войти</button><br />
                 <p style={{fontSize:'15px'}}>Еще нет аккаунта? <Link to={'/'}>Зарегистрироваться</Link></p>
