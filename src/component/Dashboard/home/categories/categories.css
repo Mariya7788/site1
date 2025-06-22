@@ -1,102 +1,111 @@
-/* card style */
+/* Основные стили для карточек */
 .indi-css{
-  height: 100%;
-  padding-bottom: 10px;
+    height: 100%;
+    padding-bottom: 10px;
 }
 
 .category-list h2{
-  padding-top: 38px;
-  text-align: center;
-  color: #7e2020;
-  font-size: 35px;
+    padding-top: 38px;
+    text-align: center;
+    color: #7e2020;
+    font-size: 35px;
 }
 
 .indi-css h3, .h3{
-  border-bottom-right-radius: 15px;
-  border-top-right-radius: 15px;
-  background-color:brown ;
-  color: rgba(255, 231, 167, 0.9);
-  width: 200px;
-  padding: 5px;
-  margin-left: 26px;
-  box-shadow: 1px 2px 5px black;
-  cursor:pointer;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: brown;
+    color: rgba(255, 231, 167, 0.9);
+    width: 200px;
+    padding: 5px;
+    margin-left: 26px;
+    box-shadow: 1px 2px 5px black;
+    cursor: pointer;
+}
 
-}
 .imsa{
-  height:58px;
-  width:58px;
-  margin-top: 300px;
-  border: none;
-  border-radius: 5px;
-  background-color: white;
-  color: green;
+    height: 58px;
+    width: 58px;
+    margin-top: 300px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: green;
 }
+
 .imsa:hover{
-  background-color: rgba(1, 107, 1, 0.3) ;
-  color: white;
+    background-color: rgba(1, 107, 1, 0.3);
+    color: white;
 }
+
 .main-image{
-    width: 1450px;
+    width: 100%;
+    max-width: 1450px;
     height: 385px;
     margin: 10px auto;
     position: relative;
-  }
-  .card-image, .itali-card-image, .korean-card-image{
+}
+
+.card-image, .itali-card-image, .korean-card-image{
     width: 100%;
     margin: 10px auto;
     display: flex;
     flex-direction: row;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    
-  }
-  .All-dish-card{
+}
+
+.All-dish-card{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 1400px;
+    width: 100%;
+    max-width: 1400px;
     flex-wrap: wrap;
-    padding-left: 100px ;
-  }
-  .card-image a,.itali-card-image a{
+    padding: 0 20px;
+}
+
+.card-image a, .itali-card-image a{
     width: 200px;
     margin-top: 50px;
-  }
-  .card-image p, .itali-card-image p,.All-dish-card p{
+}
+
+.card-image p, .itali-card-image p, .All-dish-card p{
     margin-top: 5px;
-  }
-  .Perslide {
-   min-width: 250px;
-   height: 340px;
-   padding: 20px;
-   background-color: white;
-   border-radius: 10px;
-   margin: 20px;
-   
-  }
-  .Perslide:hover{
+}
+
+.Perslide {
+    min-width: 250px;
+    height: 340px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.Perslide:hover{
     cursor: pointer;
     box-shadow: 5px 5px 10px black;
-  }
-  .Perslide img{
+}
+
+.Perslide img{
     width: 100%;
     height: 200px;
     border-radius: 10px;
-    box-shadow:3px 2px 5px #a8a0a0;
-  }
+    box-shadow: 3px 2px 5px #a8a0a0;
+}
 
-  .quantity-button{
-    width:20px;
+.quantity-button{
+    width: 20px;
     height: 20px;
     border: none;
+}
 
-  }
-  .rightImageArrowStyles{
+.rightImageArrowStyles{
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
-    color:rgba(156, 154, 154, 0.8);
+    color: rgba(156, 154, 154, 0.8);
     width: 60px;
     border-radius: 50%;
     text-align: center;
@@ -105,107 +114,123 @@
     border: 0px;
     font-size: 25px;
     right: 0px;
-  }
-  .leftImageArrowStyles{
+}
+
+.leftImageArrowStyles{
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
     font-size: 25px;
-    color:rgba(156, 154, 154, 0.8);
+    color: rgba(156, 154, 154, 0.8);
     width: 60px;
     border-radius: 50%;
     background-color: transparent;
     text-align: center;
     height: 59px;
     border: 0px;
-  }
-  .leftImageArrowStyles:hover{
+}
+
+.leftImageArrowStyles:hover{
     background-color: rgba(230, 217, 217, 0.8);
     color: rgba(156, 154, 154, 0.8);
-  }
-  .rightImageArrowStyles:hover{
-    background-color:  rgba(230, 217, 217, 0.8);
+}
+
+.rightImageArrowStyles:hover{
+    background-color: rgba(230, 217, 217, 0.8);
     color: rgba(156, 154, 154, 0.8);
-  }
-  .slide-cart-button{
+}
+
+.slide-cart-button{
     border: none;
     float: right;
     margin: 2px;
-    background-color:  rgb(104, 177, 104);
+    background-color: rgb(104, 177, 104);
     border-radius: 5px;
     color: white;
     padding: 3px 5px;
-   
-  }
-  .slide-cart-button:hover{
+}
+
+.slide-cart-button:hover{
     background-color: rgb(60, 132, 60);
-    box-shadow:3px 2px 5px #0c0c0c;
-  }
-  .slide-cart-button:active{
+    box-shadow: 3px 2px 5px #0c0c0c;
+}
+
+.slide-cart-button:active{
     background-color: chocolate;
-  }
-  /* Single food page */
-  .backHome{
+}
+
+/* Стили для страницы отдельного блюда */
+.backHome{
     border: none;
     margin-left: 30px;
-    background-color:  rgba(104, 177, 104,0.9);
+    background-color: rgba(104, 177, 104, 0.9);
     width: 110px;
     height: 40px;
     color: white;
     border-radius: 5px;
-  }
-  .sfp-bg{
+}
+
+.sfp-bg{
     background-image: url('/src/component/Dashboard/image/jeni1.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    
-  }
-  .sfp-main{
+}
+
+.sfp-main{
     display: flex;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 60px;
-    width: 1270px;
-    margin: 40px 120px;
+    width: 100%;
+    max-width: 1270px;
+    margin: 40px auto;
     border-radius: 10px;
-  }
-  .sfp-first img{
+}
+
+.sfp-first img{
     width: 500px;
     height: 500px;
     border-radius: 10px;
     box-shadow: 1px 1px 5px black;
-  }
-  .spf-second{
+}
+
+.spf-second{
     padding-left: 20px;
-  }
-  .spf-second h3{
+}
+
+.spf-second h3{
     color: darkgray;
-  }
-  .spf-second span{
+}
+
+.spf-second span{
     color: darkgreen;
     font-size: 17px;
-  }
-  .spf-second p{
+}
+
+.spf-second p{
     line-height: 30px;
-  }
-  .spf-second button{
+}
+
+.spf-second button{
     border: none;
-    background-color:rgb(104, 177, 104);
+    background-color: rgb(104, 177, 104);
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
-  }
-  .spf-second button:hover{
+}
+
+.spf-second button:hover{
     border-radius: 5px;
     background-color: rgb(95, 163, 95);
     box-shadow: 2px 3px 4px black;
-  }
-  .spf-second button:active{
-    background-color:chocolate;
-  }
-  .category-list{
-    /* background-color:rgba(244, 158, 0, 0.7); */
+}
+
+.spf-second button:active{
+    background-color: chocolate;
+}
+
+.category-list{
     padding-bottom: 10px;
     background-image: url(../../image/category.jpg);
     background-color: rgba(0, 0, 0, 0.168);
@@ -214,23 +239,182 @@
     background-size: cover;
     background-attachment: fixed;
     height: 100%;
+}
 
-  }
-  .category-main{
+.category-main{
     display: flex;
     justify-content: space-evenly;
-  }
-  .category-main img{
- width: 230px;
- height: 230px;
- margin: 30px;
- border-radius: 50%;
- cursor: pointer;
- box-shadow: 2px 2px 6px black;
-  }
-  .category-main p{
+    flex-wrap: wrap;
+}
+
+.category-main img{
+    width: 230px;
+    height: 230px;
+    margin: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 2px 2px 6px black;
+}
+
+.category-main p{
     text-align: center;
     color: #7e2020;
     font-size: 24px;
     font-weight: 500;
-  }
+}
+
+/* Мобильные стили */
+@media (max-width: 768px) {
+    .category-list h2 {
+        font-size: 28px;
+        padding-top: 20px;
+    }
+
+    .indi-css h3 {
+        width: 150px;
+        margin-left: 15px;
+        font-size: 16px;
+    }
+
+    .main-image {
+        height: 300px;
+    }
+
+    .Perslide {
+        min-width: 200px;
+        height: 280px;
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .Perslide img {
+        height: 150px;
+    }
+
+    .slide-cart-button {
+        padding: 2px 4px;
+        font-size: 12px;
+    }
+
+    .category-main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category-main img {
+        width: 180px;
+        height: 180px;
+        margin: 20px;
+    }
+
+    .category-main p {
+        font-size: 20px;
+    }
+
+    .sfp-main {
+        flex-direction: column;
+        padding: 30px 20px;
+        margin: 20px;
+    }
+
+    .sfp-first img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    .spf-second {
+        padding-left: 0;
+        padding-top: 20px;
+    }
+
+    .All-dish-card {
+        justify-content: center;
+        padding: 0 10px;
+    }
+
+    .leftImageArrowStyles, .rightImageArrowStyles {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .imsa {
+        height: 50px;
+        width: 50px;
+        margin-top: 250px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-list h2 {
+        font-size: 24px;
+    }
+
+    .indi-css h3 {
+        width: 120px;
+        margin-left: 10px;
+        font-size: 14px;
+        padding: 3px;
+    }
+
+    .main-image {
+        height: 250px;
+    }
+
+    .Perslide {
+        min-width: 160px;
+        height: 240px;
+        padding: 10px;
+        margin: 8px;
+    }
+
+    .Perslide img {
+        height: 120px;
+    }
+
+    .slide-cart-button {
+        padding: 1px 3px;
+        font-size: 10px;
+    }
+
+    .category-main img {
+        width: 150px;
+        height: 150px;
+        margin: 15px;
+    }
+
+    .category-main p {
+        font-size: 18px;
+    }
+
+    .sfp-main {
+        padding: 20px 15px;
+        margin: 15px;
+    }
+
+    .spf-second h1 {
+        font-size: 24px;
+    }
+
+    .spf-second button {
+        padding: 8px 12px;
+        font-size: 14px;
+        margin: 5px 0;
+    }
+
+    .leftImageArrowStyles, .rightImageArrowStyles {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .leftImageArrowStyles {
+        left: 5px;
+    }
+
+    .rightImageArrowStyles {
+        right: 5px;
+    }
+}

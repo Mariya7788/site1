@@ -1,44 +1,50 @@
-
 .register-main, .login-main{
-
     width: 450px;
+    max-width: 90%;
     display: flex;
-   position: absolute;
-   left:35%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     flex-flow: column;
-    margin-top: 60px;
     justify-self: center;
     padding: 50px;
     background-color: rgba(253, 254, 254, 0.9);
     border-radius: 10px;
     box-shadow: 2px 2px 6px black;
 }
+
 .errP{
     align-self: center;
     color: red;
     margin-top: 10px;
 }
+
 .register-main p, .login-main p{
     line-height: 6px;
     font-size: 18px;
-
 }
+
 .register-main h1, .login-main h1{
     align-self: center;
 }
+
 .register-main input, .login-main input{
     border-top: none;
-    border-left:none;
-    border-right:none;
+    border-left: none;
+    border-right: none;
     background-color: transparent;
     outline-style: none;
     color: dimgrey;
-
+    padding: 10px 0;
+    font-size: 16px;
 }
+
 input:focus{
     border-color: rgb(168, 82, 22);
-    caret-color: chocolate ;
+    caret-color: chocolate;
 }
+
 .register-main button, .login-main button{
     margin: 20px 0px !important;
     height: 40px;
@@ -47,19 +53,104 @@ input:focus{
     border: none;
     background-color: rgb(11, 169, 11);
     color: white;
-    
+    border-radius: 5px;
+    cursor: pointer;
 }
+
 .register-main button:hover, .login-main button:hover{
     box-shadow: 2px 3px 5px black;
     background-color: rgb(3, 149, 3);
 }
+
 .login-body, .register-body{
     background-image: url(../Dashboard/image/jeni.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    height: 806px;
-    margin-top: -61px;
-    padding-top: 132px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Мобильные стили */
+@media (max-width: 768px) {
+    .register-main, .login-main {
+        width: 350px;
+        padding: 30px;
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        margin: 20px auto;
+    }
+
+    .register-main h1, .login-main h1 {
+        font-size: 24px;
+    }
+
+    .register-main p, .login-main p {
+        font-size: 16px;
+    }
+
+    .register-main input, .login-main input {
+        font-size: 16px;
+        padding: 12px 0;
+    }
+
+    .register-main button, .login-main button {
+        width: 120px;
+        height: 45px;
+        font-size: 16px;
+    }
+
+    .login-body, .register-body {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .register-main, .login-main {
+        width: 300px;
+        padding: 25px;
+    }
+
+    .register-main h1, .login-main h1 {
+        font-size: 22px;
+    }
+
+    .register-main p, .login-main p {
+        font-size: 14px;
+    }
+
+    .register-main input, .login-main input {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+
+    .register-main button, .login-main button {
+        width: 100px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .login-body, .register-body {
+        padding: 15px;
+    }
+
+    .errP {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 320px) {
+    .register-main, .login-main {
+        width: 280px;
+        padding: 20px;
+    }
+
+    .register-main h1, .login-main h1 {
+        font-size: 20px;
+    }
 }

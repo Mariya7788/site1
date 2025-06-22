@@ -4,89 +4,255 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-
+    min-height: 100vh;
+    padding: 20px;
 }
+
 .imge{
     width: 250px;
     height: 260px;
     display: block;
-    margin-left: 200px
+    margin: 0 auto 20px auto;
+    border-radius: 10px;
 }
+
 .profile-main{
     background-color: rgba(255, 255, 255, 0.905);
-    padding: 30px 80px;
+    padding: 30px;
     border-radius: 10px;
-    width: 859px;
-    margin:50px 300px;
-    height: 100%;
-
+    width: 100%;
+    max-width: 800px;
+    margin: 50px auto;
+    min-height: calc(100vh - 140px);
 }
+
 .profile-main label{
     width: 200px;
-    padding: 10px;
+    padding: 10px 0;
     font-size: 20px;
-    
+    display: inline-block;
 }
+
 .profile-main p{
     display: inline-block;
     padding: 10px;
     color: green;
-    background-color: rgba(216, 214, 214,0.5);
-    width: 400px;
-   
+    background-color: rgba(216, 214, 214, 0.5);
+    width: 100%;
+    max-width: 400px;
+    margin: 0;
+    border-radius: 5px;
 }
+
+.profile-form-row{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.address-section{
+    margin-top: 20px;
+}
+
 textarea{
-   border: none;
-   background-color: rgba(216, 214, 214,0.5);
-   outline: none;
+    border: none;
+    background-color: rgba(216, 214, 214, 0.5);
+    outline: none;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border-radius: 5px;
+    resize: vertical;
 }
+
 .btne{
     color: white;
     background-color: rgba(26, 112, 26, 0.689);
     border-radius: 10px;
-    padding: 5px;
+    padding: 8px 15px;
     border: none;
     outline: none;
+    cursor: pointer;
+    margin-top: 10px;
 }
+
+.btne:hover{
+    background-color: rgba(26, 112, 26, 0.8);
+}
+
 .profile-ul{
     list-style-type: none;
-    padding-inline-start: 1px;
+    padding-inline-start: 0;
+    margin-top: 15px;
 }
+
 .profile-li{
     background-color: rgb(246, 233, 217);
-    padding: 10px;
+    padding: 15px;
     border-radius: 10px;
-    margin: 10px 0px;
-    width: 425px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 425px;
     word-wrap: break-word;  
     position: relative;
-    height: 100%;
+    min-height: 50px;
 }
+
 .profile-li button{
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 10px;
+    top: 10px;
     background-color: transparent;
     border-radius: 5px;
-    border:none;
+    border: none;
     color: red;
-    width: 35px;
-    height: 35px;
-    font-size: 20px;
-    padding-bottom: 35px;
-
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 .profile-li button:hover{
-    background-color:rgba(246, 1, 1, 0.575);
+    background-color: rgba(246, 1, 1, 0.575);
     color: white;
 }
+
 .savebutton{
     color: white;
     background-color: rgb(232, 117, 10);
     border: none;
     border-radius: 5px;
-    padding: 10px;
-    margin: 20px 80px;
-    width: 118px;
+    padding: 12px 20px;
+    margin: 20px auto;
+    width: 150px;
     font-weight: 500;
+    cursor: pointer;
+    display: block;
+}
+
+.savebutton:hover{
+    background-color: rgb(200, 100, 8);
+}
+
+/* Мобильные стили */
+@media (max-width: 768px) {
+    .progile-bg {
+        padding: 15px;
+    }
+
+    .profile-main {
+        padding: 25px 20px;
+        margin: 30px auto;
+    }
+
+    .imge {
+        width: 200px;
+        height: 210px;
+    }
+
+    .profile-form-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .profile-main label {
+        width: 100%;
+        font-size: 18px;
+        padding: 5px 0;
+    }
+
+    .profile-main p {
+        width: 100%;
+        max-width: none;
+    }
+
+    textarea {
+        width: 100%;
+        max-width: none;
+    }
+
+    .profile-li {
+        width: 100%;
+        max-width: none;
+        padding-right: 50px;
+    }
+
+    .savebutton {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .progile-bg {
+        padding: 10px;
+    }
+
+    .profile-main {
+        padding: 20px 15px;
+        margin: 20px auto;
+    }
+
+    .imge {
+        width: 150px;
+        height: 160px;
+    }
+
+    .profile-main label {
+        font-size: 16px;
+    }
+
+    .profile-main p {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .btne {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .profile-li {
+        padding: 12px;
+        padding-right: 45px;
+        font-size: 14px;
+    }
+
+    .profile-li button {
+        width: 25px;
+        height: 25px;
+        font-size: 14px;
+        right: 8px;
+        top: 8px;
+    }
+
+    .savebutton {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 320px) {
+    .profile-main {
+        padding: 15px 10px;
+    }
+
+    .imge {
+        width: 120px;
+        height: 130px;
+    }
+
+    .profile-main label {
+        font-size: 14px;
+    }
 }
