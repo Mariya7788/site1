@@ -59,6 +59,7 @@ function Profile(){
                             placeholder='Введите ваш адрес...'
                         ></textarea>
                         {inputErr && <small style={{color:"red", display:"block"}}>Вы должны что-то написать</small>}
+                        }
                         <button className="btne" onClick={AddEvent}>Добавить адрес</button>
                     </div>
                     
