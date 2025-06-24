@@ -3,11 +3,13 @@ import Footer from "../footer/footer";
 import Header from "../header/header";
 import profile from '../image/profile.png'
 import '../profile/profilr.css'
+
 function Profile(){
     let data= JSON.parse (sessionStorage.getItem('user') )
     const[inputValue,setInput]=useState('')
     const [inputErr,setinputErr]=useState(false)
     const [list,listvalue]=useState([])
+    
     function AddEvent(){
         if(inputValue.trim().length===0){
             setinputErr(true)
@@ -18,42 +20,61 @@ function Profile(){
             let newList=[...list,inputValue]
             listvalue(newList)
             setInput('')
+        }
     }
-    }
+    
     function Saveprofile(){
        sessionStorage.setItem('profile',JSON.stringify({'name':data.name ,'address':list}))
+       alert('Профиль сохранен!')
     }
+    
     function remove(listname){
        let removeList=list.filter((ele)=>(ele!==listname))
         listvalue(removeList)
     }
+    
     return (
         <div className="progile-bg">
             <Header />
             <div className="profile-main">
-                <img src={profile} className='imge'></img> <br />
-                <label> UserName </label>
-                : <p> {data.name}</p><br />
+                <img src={profile} className='imge' alt="Профиль"></img>
                 
-                <label> Phone no </label>
-                : <p>9003079869</p>
-                <label>Address </label>
-                <div style={{marginLeft:'208px',marginTop:'-32PX'}}> 
-                 <textarea rows="4" cols="55" value={inputValue} onChange={(e)=>setInput(e.target.value)} placeholder='Enter Your Address...'></textarea>
-                 {inputErr && <small style={{display:"block"}}>You must write something</small>}
-                     <button className="btne" onClick={AddEvent}>Add Address</button>
-                  
-                     <ul className="profile-ul">
-                         {list.map((ele)=>{
-                             return<>
-                                <li className="profile-li">{ele} 
-                                 <button onClick={()=>remove(ele)}>x</button></li>
-                                  </>
-                             })}
-                    </ul>
-                    <button onClick={(e)=>Saveprofile(e.target.value)} className='savebutton'>Save</button>
-                 </div>
+                <div className="profile-form-row">
+                    <label>Имя пользователя:</label>
+                    <p>{data.name}</p>
+                </div>
+                
+                <div className="profile-form-row">
+                    <label>Телефон:</label>
+                    <p>9003079869</p>
+                </div>
+                
+                <div className="address-section">
+                    <label>Адрес:</label>
+                    <div className="address-input-container">
+                        <textarea 
+                            rows="4" 
+                            value={inputValue} 
+                            onChange={(e)=>setInput(e.target.value)} 
+                            placeholder='Введите ваш адрес...'
+                        ></textarea>
+                        {inputErr && <small style={{color:"red", display:"block"}}>Вы должны что-то написать</small>}
+                        <button className="btne" onClick={AddEvent}>Добавить адрес</button>
+                    </div>
                     
+                    <ul className="profile-ul">
+                        {list.map((ele, index)=>{
+                            return (
+                                <li key={index} className="profile-li">
+                                    {ele} 
+                                    <button onClick={()=>remove(ele)}>×</button>
+                                </li>
+                            )
+                        })}
+                    </ul>
+                    
+                    <button onClick={Saveprofile} className='savebutton'>Сохранить профиль</button>
+                </div>
             </div>
             <Footer />
         </div>

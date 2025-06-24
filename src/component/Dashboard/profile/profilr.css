@@ -6,6 +6,7 @@
     background-attachment: fixed;
     min-height: 100vh;
     padding: 20px;
+    overflow-x: hidden;
 }
 
 .imge{
@@ -14,16 +15,27 @@
     display: block;
     margin: 0 auto 20px auto;
     border-radius: 10px;
+    object-fit: cover;
 }
 
 .profile-main{
-    background-color: rgba(255, 255, 255, 0.905);
+    background-color: rgba(255, 255, 255, 0.95);
     padding: 30px;
     border-radius: 10px;
     width: 100%;
     max-width: 800px;
     margin: 50px auto;
     min-height: calc(100vh - 140px);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.profile-form-row{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .profile-main label{
@@ -31,82 +43,104 @@
     padding: 10px 0;
     font-size: 20px;
     display: inline-block;
+    font-weight: 500;
+    color: #333;
 }
 
 .profile-main p{
     display: inline-block;
-    padding: 10px;
-    color: green;
-    background-color: rgba(216, 214, 214, 0.5);
+    padding: 10px 15px;
+    color: #2d5a2d;
+    background-color: rgba(216, 214, 214, 0.7);
     width: 100%;
     max-width: 400px;
     margin: 0;
-    border-radius: 5px;
-}
-
-.profile-form-row{
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    flex-wrap: wrap;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .address-section{
     margin-top: 20px;
+    width: 100%;
+}
+
+.address-input-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
 }
 
 textarea{
-    border: none;
-    background-color: rgba(216, 214, 214, 0.5);
+    border: 2px solid rgba(216, 214, 214, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     outline: none;
     width: 100%;
-    max-width: 400px;
-    padding: 10px;
-    border-radius: 5px;
+    max-width: 500px;
+    padding: 12px;
+    border-radius: 8px;
     resize: vertical;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.4;
+    min-height: 80px;
+    box-sizing: border-box;
+}
+
+textarea:focus{
+    border-color: rgba(26, 112, 26, 0.6);
+    box-shadow: 0 0 5px rgba(26, 112, 26, 0.3);
 }
 
 .btne{
     color: white;
-    background-color: rgba(26, 112, 26, 0.689);
-    border-radius: 10px;
-    padding: 8px 15px;
+    background-color: rgba(26, 112, 26, 0.8);
+    border-radius: 8px;
+    padding: 10px 20px;
     border: none;
     outline: none;
     cursor: pointer;
     margin-top: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
 }
 
 .btne:hover{
-    background-color: rgba(26, 112, 26, 0.8);
+    background-color: rgba(26, 112, 26, 0.9);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .profile-ul{
     list-style-type: none;
     padding-inline-start: 0;
     margin-top: 15px;
+    width: 100%;
 }
 
 .profile-li{
-    background-color: rgb(246, 233, 217);
+    background-color: rgba(246, 233, 217, 0.9);
     padding: 15px;
     border-radius: 10px;
     margin: 10px 0;
     width: 100%;
-    max-width: 425px;
-    word-wrap: break-word;  
+    max-width: 525px;
+    word-wrap: break-word;
     position: relative;
     min-height: 50px;
+    box-sizing: border-box;
+    border: 1px solid rgba(200, 200, 200, 0.5);
 }
 
 .profile-li button{
     position: absolute;
     right: 10px;
     top: 10px;
-    background-color: transparent;
-    border-radius: 5px;
-    border: none;
-    color: red;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    color: #d32f2f;
     width: 30px;
     height: 30px;
     font-size: 16px;
@@ -114,28 +148,34 @@ textarea{
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
 .profile-li button:hover{
-    background-color: rgba(246, 1, 1, 0.575);
+    background-color: #d32f2f;
     color: white;
+    transform: scale(1.1);
 }
 
 .savebutton{
     color: white;
     background-color: rgb(232, 117, 10);
     border: none;
-    border-radius: 5px;
-    padding: 12px 20px;
+    border-radius: 8px;
+    padding: 15px 25px;
     margin: 20px auto;
-    width: 150px;
-    font-weight: 500;
+    width: 200px;
+    font-weight: 600;
     cursor: pointer;
     display: block;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
 .savebutton:hover{
     background-color: rgb(200, 100, 8);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Мобильные стили */
@@ -147,6 +187,7 @@ textarea{
     .profile-main {
         padding: 25px 20px;
         margin: 30px auto;
+        max-width: calc(100% - 30px);
     }
 
     .imge {
@@ -157,7 +198,8 @@ textarea{
     .profile-form-row {
         flex-direction: column;
         align-items: flex-start;
-        gap: 10px;
+        gap: 8px;
+        margin-bottom: 15px;
     }
 
     .profile-main label {
@@ -169,22 +211,49 @@ textarea{
     .profile-main p {
         width: 100%;
         max-width: none;
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    .address-section {
+        margin-top: 15px;
     }
 
     textarea {
         width: 100%;
         max-width: none;
+        font-size: 15px;
+        padding: 12px;
+        min-height: 100px;
     }
 
     .profile-li {
         width: 100%;
         max-width: none;
-        padding-right: 50px;
+        padding: 15px 45px 15px 15px;
+        font-size: 14px;
+    }
+
+    .profile-li button {
+        right: 8px;
+        top: 8px;
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
     }
 
     .savebutton {
         width: 100%;
+        max-width: 250px;
+        font-size: 16px;
+        padding: 15px 20px;
+    }
+
+    .btne {
+        width: 100%;
         max-width: 200px;
+        padding: 12px 20px;
+        font-size: 15px;
     }
 }
 
@@ -196,6 +265,7 @@ textarea{
     .profile-main {
         padding: 20px 15px;
         margin: 20px auto;
+        max-width: calc(100% - 20px);
     }
 
     .imge {
@@ -209,42 +279,49 @@ textarea{
 
     .profile-main p {
         font-size: 14px;
-        padding: 8px;
+        padding: 10px;
     }
 
     textarea {
         font-size: 14px;
-        padding: 8px;
+        padding: 10px;
+        min-height: 90px;
     }
 
     .btne {
-        padding: 6px 12px;
+        padding: 10px 15px;
         font-size: 14px;
+        width: 100%;
+        max-width: 180px;
     }
 
     .profile-li {
-        padding: 12px;
-        padding-right: 45px;
-        font-size: 14px;
+        padding: 12px 40px 12px 12px;
+        font-size: 13px;
+        line-height: 1.4;
     }
 
     .profile-li button {
-        width: 25px;
-        height: 25px;
+        width: 28px;
+        height: 28px;
         font-size: 14px;
-        right: 8px;
-        top: 8px;
+        right: 6px;
+        top: 6px;
     }
 
     .savebutton {
-        padding: 10px 15px;
-        font-size: 14px;
+        padding: 12px 18px;
+        font-size: 15px;
+        width: 100%;
+        max-width: 220px;
     }
 }
 
 @media (max-width: 320px) {
     .profile-main {
         padding: 15px 10px;
+        margin: 15px auto;
+        max-width: calc(100% - 15px);
     }
 
     .imge {
@@ -254,5 +331,39 @@ textarea{
 
     .profile-main label {
         font-size: 14px;
+    }
+
+    .profile-main p {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    textarea {
+        font-size: 13px;
+        padding: 8px;
+        min-height: 80px;
+    }
+
+    .btne {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+
+    .profile-li {
+        padding: 10px 35px 10px 10px;
+        font-size: 12px;
+    }
+
+    .profile-li button {
+        width: 25px;
+        height: 25px;
+        font-size: 12px;
+        right: 5px;
+        top: 5px;
+    }
+
+    .savebutton {
+        font-size: 14px;
+        padding: 10px 15px;
     }
 }
